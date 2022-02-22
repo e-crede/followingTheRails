@@ -2,14 +2,10 @@
 # Ruby basics from CodeCademy course
 #
 
-#data types
-my_num = 25    # Add your code here!
-my_boolean = true    # And here!
-my_string = "Ruby"    # Also here.
-
-puts my_num
-puts my_boolean
-puts my_string
+# Data types
+my_num = 25 # implicit number size & type
+my_boolean = true # no capitalisation
+my_string = "Ruby"
 
 # Basic Math
 # [**] - exponent; [%] - modulo
@@ -21,7 +17,6 @@ puts "ends with newline" # adds new line
 print "no additional characters\n" # outputs original string
 
 # Object oriented language, every object (e.g. numbers,strings etc.) has it's methods:
-
 puts my_string.length
 puts my_string.reverse
 puts my_string.upcase
@@ -34,7 +29,7 @@ here's a
 multi line comment
 =end
 
-#naming convention
+# Naming convention
 local_variables_use_snake_case = "OK"
 
 
@@ -43,20 +38,20 @@ name = "AAAbbb"
 name = name.downcase.reverse.upcase # name variable has to be updated to take into account the variables
 puts name
 
-#Though, adding an exclamation at the mark replaces the variable in-place
+# Though, adding an exclamation at the mark replaces the variable in-place
 name.reverse!
 puts name
 
-#user input can be captured with gets.chomp method:
+# User input can be captured with gets.chomp method:
 print "Enter something:"
 answer = gets.chomp
 
-#and printed out in strings with this syntax
+# And printed out in strings with this syntax
 puts "you entered #{answer}"
 
 ### Control Flow
-# If Statement
 
+# If Statement
 if true
     puts true
   elsif false
@@ -84,14 +79,14 @@ test_4 = -11 < 4
 boolean_2 = true && 100 >= 100 # and
 boolean_1 = 2**3 != 3**2 || true # or
 boolean_3 = !(700 / 10 == 70) # not
-#combining operators is valid
+# Combining operators is valid
 boolean_2 = !true && (!true || 100 != 5**2)
 
-# methods with ? tend to evaluate to true/false and can be used in control flow
+# Methods with ? tend to evaluate to true/false and can be used in control flow
 if "abcdef".include? "e"
     print "with e"
   end
-# methods for a partial string replace exists; gsub = global substitution
+# Methods for a partial string replace exists; gsub = global substitution
 "Global Subsititution".gsub!(/s/,"th")
 
 ### Loops & Iterators
@@ -108,7 +103,7 @@ until i == 5
   i = i + 1
 end
 
-# shortcut assignments exist: += and -= 
+# Shortcut assignments exist: += and -= 
 i+=1
 
 # for
@@ -121,7 +116,7 @@ for num in 1...10
     puts num
   end
 
-# loop iterator
+# Loop iterator
 # {} interchangeable with "do" keyword
   i = 20
 loop do
@@ -131,7 +126,7 @@ loop do
   break if i <= 0
 end
 
-# arrays can be iterated with each method
+# Arrays can be iterated with each method
 odds = [1,3,5,7,9]
 odds.each do |i|
   print i*2
@@ -147,16 +142,16 @@ end
 demo_array = [100, 200, 300, 400, 500]
 print  demo_array[2]
 
-# arrays can consist of other arrays = multi dimensional arrays
+# Arrays can consist of other arrays = multi dimensional arrays
 multi_d_array = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
 multi_d_array.each { |x| puts "#{x}\n" }
 
 # Hash is a python dictionary
-# literal notation to create hash
+# Literal notation to create hash
 my_hash = {
     "key" => "value"
 }
- # alternative way to create hash
+# Alternative way to create hash
 my_hash = Hash.new
 my_hash["key"] = "value"
 
@@ -187,11 +182,11 @@ def what_up(greeting, *friends)
   end
   what_up("What up", "Ian", "Zoe", "Zenas", "Eleanor")
 
-# nameless methods are named Blocks (lambdas in python); {brackets} as well as do-end can be used for definitions
+# Nameless methods are named Blocks (lambdas in python); {brackets} as well as do-end can be used for definitions
 1.times { puts "As am I!" }
 
 
-# combined comparison operator <=> ; returns 0 if first operand equal to second, 1 if first operand is greater, -1 if first operand is less than a second one
+# Combined comparison operator <=> ; returns 0 if first operand equal to second, 1 if first operand is greater, -1 if first operand is less than a second one
 "a" <=> "b" # useful when sorting string arrays - eg descending order
 
 # nil - Ruby's None equivalent of python
@@ -222,7 +217,7 @@ movies ={
     b: "val2"
   }
 
-#Note - benchmark inbuilt capability
+# Note - benchmark inbuilt capability
 symbol_AZ = Hash[(:a..:z).to_a.zip((1..26).to_a)]
 symbol_time = Benchmark.realtime do
     100_000.times { symbol_AZ[:r] }
@@ -245,7 +240,7 @@ movie_ratings = {
   puts movie_ratings.each_value {|i| puts i} 
 
 
-#Case / switch statements -> Case statements use case / when / else keywords
+# Case / switch statements -> Case statements use case / when / else keywords
 movies = {bigBang: 1}
 
 puts "Select Option"
