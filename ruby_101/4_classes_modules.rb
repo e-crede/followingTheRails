@@ -1,4 +1,4 @@
-# Objects Oriented Programming
+# Classes & Modules
 
 # Class syntax
 class SomePerson # names are CamelCase
